@@ -35,7 +35,6 @@ public class Locators {
     public static By yearToField = By.xpath("//div[@class = 'SumoSelect sumo_year_to']");
 
     public static By selectYear = By.xpath("//div[contains(@class, 'open')]//li//label[text()='**** god.']");
-
     public void setYearInLocator(String year){
         String yearLocator = "//div[contains(@class, 'open')]//li//label[text()='**** god.']";
         yearLocator.replace("****", year);
@@ -44,6 +43,11 @@ public class Locators {
     public static By fuelType = By.xpath("//div[@class='SumoSelect sumo_fuel']");
 
     public static By fuelTypeDizel = By.xpath("//div[@class='SumoSelect sumo_fuel open']//li//label[text()='Dizel']");
+
+    public static By fuelTypeSelect = By.xpath("//div[@class='SumoSelect sumo_fuel open']//li//label[text()='*ftd*']");
+    public void setFuelType(String fuelType){
+        String fuelLocator = "//div[@class='SumoSelect sumo_fuel open']//li//label[text()='*ftd*']";
+        fuelLocator.replace("*ftd*", fuelType);}
 
 
 
