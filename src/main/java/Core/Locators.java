@@ -49,6 +49,11 @@ public class Locators {
         String fuelLocator = "//div[@class='SumoSelect sumo_fuel open']//li//label[text()='*ftd*']";
         fuelLocator.replace("*ftd*", fuelType);}
 
+    public static By regionSelect = By.xpath("//div[@class='SumoSelect sumo_region']");
+    //public void setRegionSelect (String Region){
+      //  String regionLocator =
+    }
+
 
 
     //public static String MESSAGE_WINDOW_BUTTON =
