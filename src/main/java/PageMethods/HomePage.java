@@ -30,8 +30,24 @@ public class HomePage extends BasePage {
     public HomePage selectYearTo (int yearTo){
         clickOnElement(Locators.yearToField);
         clickOnElement(Locators.setYearInLocator(Integer.toString(yearTo)));
-        return this;
+        return this;}
 
-    //public HomePage openFuelMenu (String fuelSelect){
-    //}
+   public HomePage selectFuelMenu (String fuelSelect){
+        clickOnElement(Locators.fuelTypeMenu);
+        clickOnElement(Locators.setFuelType(fuelSelect));
+        return this;}
+
+   public HomePage selectRegionMenu (String regionSelect){
+        clickOnElement(Locators.regionMenu);
+        clickOnElement(Locators.setRegion(regionSelect));
+        return this;}
+
+   public HomePage clickSearchButton(){
+        clickOnElement(Locators.searchButton);
+        return this;}
+
+   public HomePage selectSortType (String sortType){
+        clickOnElement(Locators.sortOrderMenu);
+        clickOnElement(Locators.setSortType(sortType));
+        return this;}
 }

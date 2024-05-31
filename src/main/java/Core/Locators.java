@@ -27,18 +27,19 @@ public class Locators {
         return By.xpath(yearLocator);}
 
     public static By fuelTypeMenu = By.xpath("//div[@class='SumoSelect sumo_fuel']");
-
-    public static By fuelTypeDizel = By.xpath("//div[@class='SumoSelect sumo_fuel open']//li//label[text()='Dizel']");
-
-    public void setFuelType(String fuelType){
+    public static By setFuelType(String fuelType){
         String fuelLocator = "//div[@class='SumoSelect sumo_fuel open']//li//label[text()='****']";
-        fuelLocator.replace("****", fuelType);}
+        fuelLocator.replace("****", fuelType);
+        return By.xpath(fuelLocator);}
+
+    //public static By fuelTypeDizel = By.xpath("//div[@class='SumoSelect sumo_fuel open']//li//label[text()='Dizel']");
 
 
     public static By regionMenu = By.xpath("//div[@class='SumoSelect sumo_region']");
-    public void setRegion(String region){
+    public static By setRegion(String region){
         String regionLocator = "//div[contains(@class, 'open')]//li//label[text()='****']";
-        regionLocator.replace("****", region);}
+        regionLocator.replace("****", region);
+        return By.xpath(regionLocator);}
 
     public static By searchButton = By.xpath("//button[@name='submit_1']");
 
@@ -46,9 +47,10 @@ public class Locators {
 
     public static By sortOrderMenu = By.xpath("(//div[@class='SumoSelect sumo_sortOrder'])[1]");
     public static By priceDescendingSort = By.xpath("//div[contains(@class, 'open')]//li//label[text()='ceni silazno']");
-    public void setSortType(String sortType){
+    public static By setSortType(String sortType){
         String sortTypeLocator = "//div[contains(@class, 'open')]//li//label[text()='****']";
-        sortTypeLocator.replace("****", sortType);}
+        sortTypeLocator.replace("****", sortType);
+        return By.xpath(sortTypeLocator);}
 
     public static By secondSearchResult = By.xpath("(//article)[2]");
     public static By getCarInfo = By.xpath("//div[text()='****']//following-sibling::div");
