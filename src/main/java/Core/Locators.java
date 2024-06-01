@@ -43,19 +43,30 @@ public class Locators {
 
     public static By searchButton = By.xpath("//button[@name='submit_1']");
 
-    public static By searchSecondPage = By.xpath("(//a[text()='2'])[1]");
+    //public static By searchSecondPage = By.xpath();
 
     public static By sortOrderMenu = By.xpath("(//div[@class='SumoSelect sumo_sortOrder'])[1]");
-    public static By priceDescendingSort = By.xpath("//div[contains(@class, 'open')]//li//label[text()='ceni silazno']");
+    //public static By priceDescendingSort = By.xpath("//div[contains(@class, 'open')]//li//label[text()='ceni silazno']");
     public static By setSortType(String sortType){
         String sortTypeLocator = "//div[contains(@class, 'open')]//li//label[text()='****']";
         sortTypeLocator.replace("****", sortType);
         return By.xpath(sortTypeLocator);}
 
-    public static By secondSearchResult = By.xpath("(//article)[2]");
-    public static By getCarInfo = By.xpath("//div[text()='****']//following-sibling::div");
-    public void getCarInformation(String information){
+
+    public static By setSearchResultPage (String resultPage){
+        String resultPageLocator = "(//a[text()='2'])[****]";
+        resultPageLocator.replace("****", resultPage);
+        return By.xpath(resultPageLocator);}
+
+    public static By setSearchResult (String searchResult){
+        String searchResultLocator = "(//article)[****]";
+        searchResultLocator.replace("****",searchResult);
+        return By.xpath(searchResultLocator);}
+
+    public static By carInfo = By.xpath("//div[text()='****']//following-sibling::div");
+    public static By getCarInformation(String carInformation){
         String carInformationLocator = "//div[text()='****']//following-sibling::div";
-        carInformationLocator.replace("****", information);}
+        carInformationLocator.replace("****", carInformation);
+        return By.xpath(carInformationLocator);}
 
 }

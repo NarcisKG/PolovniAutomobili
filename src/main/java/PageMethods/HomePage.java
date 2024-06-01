@@ -2,6 +2,7 @@ package PageMethods;
 
 import Core.BasePage;
 import Core.Locators;
+import org.openqa.selenium.By;
 
 public class HomePage extends BasePage {
     public HomePage openBrendMenu(){
@@ -32,9 +33,9 @@ public class HomePage extends BasePage {
         clickOnElement(Locators.setYearInLocator(Integer.toString(yearTo)));
         return this;}
 
-   public HomePage selectFuelMenu (String fuelSelect){
+   public HomePage selectFuelType (String fuelTypeSelect){
         clickOnElement(Locators.fuelTypeMenu);
-        clickOnElement(Locators.setFuelType(fuelSelect));
+        clickOnElement(Locators.setFuelType(fuelTypeSelect));
         return this;}
 
    public HomePage selectRegionMenu (String regionSelect){
@@ -42,12 +43,7 @@ public class HomePage extends BasePage {
         clickOnElement(Locators.setRegion(regionSelect));
         return this;}
 
-   public HomePage clickSearchButton(){
+   public SearchResultPage clickOnSearchButton (){
         clickOnElement(Locators.searchButton);
-        return this;}
-
-   public HomePage selectSortType (String sortType){
-        clickOnElement(Locators.sortOrderMenu);
-        clickOnElement(Locators.setSortType(sortType));
-        return this;}
+        return new SearchResultPage();}
 }
