@@ -54,7 +54,7 @@ public class Locators {
 
 
     public static By setSearchResultPage (String resultPage){
-        String resultPageLocator = "(//a[text()='2'])[****]";
+        String resultPageLocator = "(//a[text()='****'])[1]";
         resultPageLocator.replace("****", resultPage);
         return By.xpath(resultPageLocator);}
 
