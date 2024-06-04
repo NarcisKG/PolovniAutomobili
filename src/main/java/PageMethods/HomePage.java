@@ -43,7 +43,7 @@ public class HomePage extends BasePage {
         clickOnElement(Locators.setRegion(regionSelect));
         return this;}
 
-   public SearchResultPage clickOnSearchButton (){
+   public SearchResultPage searchButton (){
         clickOnElement(Locators.searchButton);
         return new SearchResultPage();}
 }
