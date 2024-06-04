@@ -14,6 +14,10 @@ public class SearchResultPage extends BasePage {
         clickOnElement(Locators.setSearchResultPage(Integer.toString(searchResultPage)));
         return this;}
 
+    public CarInformationPage selectSearchResult (int searchResultSelect){
+        clickOnElement(Locators.setSearchResult(Integer.toString(searchResultSelect)));
+        return new CarInformationPage();}
+
 
 
 }

@@ -6,10 +6,6 @@ import org.junit.jupiter.api.Assertions;
 
 public class CarInformationPage extends BasePage {
 
-    public CarInformationPage selectSearchResult (int searchResultSelect){
-        clickOnElement(Locators.setSearchResult(Integer.toString(searchResultSelect)));
-        return new CarInformationPage();}
-
     public CarInformationPage verifyCarBrand (String carBrand){
         String realCarBrand = getElementText(Locators.getCarInformation("Marka"));
         Assertions.assertEquals(carBrand, realCarBrand, "Car brand is not as expected");
