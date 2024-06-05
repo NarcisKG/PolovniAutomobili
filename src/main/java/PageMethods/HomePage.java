@@ -2,7 +2,6 @@ package PageMethods;
 
 import Core.BasePage;
 import Core.Locators;
-import org.openqa.selenium.By;
 
 public class HomePage extends BasePage {
     public HomePage openBrendMenu(){
@@ -43,7 +42,7 @@ public class HomePage extends BasePage {
         clickOnElement(Locators.setRegion(regionSelect));
         return this;}
 
-   public SearchResultPage searchButton (){
+   public SearchResultPage searchButtonClick(){
         clickOnElement(Locators.searchButton);
         return new SearchResultPage();}
 }
