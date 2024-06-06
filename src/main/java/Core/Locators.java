@@ -11,7 +11,7 @@ public class Locators {
         return By.xpath(brandSearchLocator.replace("****", brandName));}
 
     public static By modelSearchField = By.xpath("//div[@class='SumoSelect sumo_model']");
-    public static By modelSearch = By.xpath("//div[@class='SumoSelect sumo_model']//input");
+    public static By modelSearch = By.xpath("//div[@class='SumoSelect sumo_model open']//input");
     public static By setModel (String model){
         String modelSearchLocator = "//div[contains(@class, 'open')]//li//label[text()=' **** ']";
         return By.xpath(modelSearchLocator.replace("****", model));}
