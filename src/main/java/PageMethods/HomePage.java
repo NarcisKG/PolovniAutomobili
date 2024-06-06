@@ -4,12 +4,12 @@ import Core.BasePage;
 import Core.Locators;
 
 public class HomePage extends BasePage {
-    public HomePage openBrendMenu(){
+    public HomePage openBrandMenu(){
         clickOnElement(Locators.brandSearchField);
         return this;}
 
     public HomePage selectBrand(String brandName){
-        typeText(brandName, Locators.brandSearchField);
+        typeText(brandName, Locators.brandSearch);
         clickOnElement(Locators.setBrand(brandName));
     return this;}
 
@@ -18,7 +18,7 @@ public class HomePage extends BasePage {
         return this;}
 
     public HomePage selectModel(String modelSelect){
-        typeText(modelSelect, Locators.modelSearchField);
+        typeText(modelSelect, Locators.modelSearch);
         clickOnElement(Locators.setModel(modelSelect));
         return this;}
 
