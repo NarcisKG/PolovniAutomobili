@@ -12,6 +12,7 @@ public class BasePage extends Properties {
 
     //final String originalWindow = getDriver().getWindowHandle();
     protected void clickOnElement(By locator) {
+        scrollToElement(locator);
         waitForElementToBeVisible(locator);//
         getDriver().findElement(locator).click();
     }
@@ -54,9 +55,9 @@ public class BasePage extends Properties {
         return driver.findElement(by);
     }
 
-    public void scrollToElement(String locator){
+    public void scrollToElement(By locator){
         scrollToElement(getDriver(),
-                findElement(getDriver(), By.xpath(locator)));}
+        findElement(getDriver(), locator));}
 
 protected int getElementCount(String locator){
         List<WebElement> webElements = getDriver().findElements(By.xpath(locator));

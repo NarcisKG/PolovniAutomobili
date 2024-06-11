@@ -13,7 +13,7 @@ public class Locators {
     public static By modelSearchField = By.xpath("//div[@class='SumoSelect sumo_model']");
     public static By modelSearch = By.xpath("//div[@class='SumoSelect sumo_model open']//input");
     public static By setModel (String model){
-        String modelSearchLocator = "//div[contains(@class, 'open')]//li//label[text()=' **** ']";
+        String modelSearchLocator = "//div[contains(@class, 'open')]//li[normalize-space(text()='****')][not(contains(@class, 'hidden'))]";
         return By.xpath(modelSearchLocator.replace("****", model));}
 
     public static By yearFromField = By.xpath("//div[@class = 'SumoSelect sumo_year_from']");
@@ -45,15 +45,14 @@ public class Locators {
     public static By sortOrderMenu = By.xpath("(//div[@class='SumoSelect sumo_sortOrder'])[1]");
     public static By setSortType(String sortType){
         String sortTypeLocator = "//div[contains(@class, 'open')]//li//label[text()='****']";
-        sortTypeLocator.replace("****", sortType);
-        return By.xpath(sortTypeLocator);}
+        return By.xpath(sortTypeLocator.replace("****", sortType));}
     //public static By priceDescendingSort = By.xpath("//div[contains(@class, 'open')]//li//label[text()='ceni silazno']");
 
 
     public static By setSearchResultPage (String resultPage){
         String resultPageLocator = "(//a[text()='****'])[1]";
-        resultPageLocator.replace("****", resultPage);
-        return By.xpath(resultPageLocator);}
+
+        return By.xpath(resultPageLocator.replace("****", resultPage));}
     //public static By searchSecondPage = By.xpath();
 
     public static By setSearchResult (String searchResult){
