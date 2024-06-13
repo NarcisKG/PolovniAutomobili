@@ -38,7 +38,11 @@ public class PolovniAutomobiliTest extends HomePage {
                 searchButtonClick().
                 selectSortType(SEARCH).
                 selectSearchResultPage(SEARCH_PAGE).
-                selectSearchResult(SEARCH_RESULT);}
+                selectSearchResult(SEARCH_RESULT).
+                verifyCarBrand(CAR_BRAND).
+                verifyCarModel("C 180").
+                verifyFuelType(FUEL_TYPE).
+                verifyProductionYear(YEAR_FROM,YEAR_TO);}
 
     @AfterEach
     public void close(){quitDriver();}

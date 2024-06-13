@@ -28,7 +28,7 @@ public class Locators {
     public static By fuelTypeMenu = By.xpath("//div[@class='SumoSelect sumo_fuel']");
     public static By setFuelType(String fuelType){
         String fuelLocator = "//div[@class='SumoSelect sumo_fuel open']//li//label[text()='****']";
-                return By.xpath(fuelLocator.replace("****", fuelType));}
+        return By.xpath(fuelLocator.replace("****", fuelType));}
 
     //public static By fuelTypeDizel = By.xpath("//div[@class='SumoSelect sumo_fuel open']//li//label[text()='Dizel']");
 
@@ -56,14 +56,12 @@ public class Locators {
     //public static By searchSecondPage = By.xpath();
 
     public static By setSearchResult (String searchResult){
-        String searchResultLocator = "(//article)[****]";
-        searchResultLocator.replace("****",searchResult);
-        return By.xpath(searchResultLocator);}
+        String searchResultLocator = "(//article)[****]//a[@class='ga-title']";
+        return By.xpath(searchResultLocator.replace("****",searchResult));}
 
     public static By getCarInformation(String carInformation){
         String carInformationLocator = "//div[text()='****']//following-sibling::div";
-        carInformationLocator.replace("****", carInformation);
-        return By.xpath(carInformationLocator);}
+        return By.xpath(carInformationLocator.replace("****", carInformation));}
 
     //public static By carInfo = By.xpath("//div[text()='****']//following-sibling::div");
 }
