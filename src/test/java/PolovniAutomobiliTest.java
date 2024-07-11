@@ -8,15 +8,11 @@ public class PolovniAutomobiliTest extends HomePage {
     public static final String CAR_BRAND = "Fiat";
     public static final String CAR_MODEL = "Grande Punto";
     public static final String FUEL_TYPE = "Dizel";
-
     public static final String REGION_SELECT = "Centralna Srbija";
     public static final int YEAR_FROM = 1995;
     public static final int YEAR_TO = 2025;
-
     public static final String SEARCH = "ceni silazno";
-
     public static final int SEARCH_PAGE = 2;
-
     public static final int SEARCH_RESULT = 1;
 
 
